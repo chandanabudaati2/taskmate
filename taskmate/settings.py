@@ -88,6 +88,8 @@ DATABASES={
     }
 }
 
+#postgresql://postgres:HRkYNByxAFSfXwaUXXLNTOQnwANwEuWl@yamanote.proxy.rlwy.net:23470/railway
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
