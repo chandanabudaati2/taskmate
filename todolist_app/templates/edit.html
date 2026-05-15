@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    <title> Edit Task - TaskMate</title>
+{%endblock title%}
+
+{% block content %}
+    <div class="container">
+        <br/>
+
+    {% if task_obj.manage == request.user%}
+        <form method = "POST">
+            {% csrf_token %}
+            <div class="row align-items-center">
+                <div class="col-lg-2"><label class="mb-0">Enter task:</label></div>
+                <div class="col-lg-6">
+                    <input type="text" name="task" class="form-control" placeholder="{{task_obj.task}}" value="{{task_obj.task}}"/>
+                </div>    
+                <input type="hidden" name="done" value="{{task_obj.task}}"/>
+                
+                <div class="col-lg-2"><button type ='submit' class="btn btn-primary">Update Task</button></div>
+            </div>
+        </form>
+    {%else%}
+        <p>Accesss Restricted,You are not Allowed!</p>
+    {%endif%}
+    </div>
+{% endblock content %}
