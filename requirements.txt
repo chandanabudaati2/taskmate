@@ -8,3 +8,4 @@ tzdata==2025.2
 sqlparse==0.5.5
 django-environ==0.13.0
 gunicorn==26.0.0
+whitenoise==6.12.0

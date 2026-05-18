@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -84,6 +85,7 @@ DATABASES={
         "USER": env("DJANGO_DB_USER"),
         "PASSWORD": env("DJANGO_DB_PASSWORD"),
         "HOST": env("DJANGO_DB_HOST"),
+       # "HOST": env("DJANGO_DB_HOST", default="localhost"),
         "PORT": env("DJANGO_DB_PORT"),
     }
 }
